@@ -1,8 +1,11 @@
-import express from "express";
+import './database/connection'
 
-import './database/connection';
+import express from 'express'
 
-const app = express();
-app.use(express.json());
+import routes from './routes'
 
-app.listen(3333);
+const app = express()
+app.use(express.json())
+app.use(routes)
+
+app.listen(3333)
