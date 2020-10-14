@@ -2,7 +2,7 @@ import Orphanage from '../models/Orphanage'
 import imagesView from './images.view'
 
 export default {
-  render(orphanage: Orpanage) {
+  render(orphanage: Orpanage): any {
     return {
       id: orphanage.id,
       name: orphanage.name,
