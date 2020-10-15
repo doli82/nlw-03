@@ -86,6 +86,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.2s;
+}
+#page-map .map-popup .leaflet-popup-content a:hover {
+    background-color: #17D6ED;
 }
 
 #page-map .map-popup .leaflet-popup-tip-container {
