@@ -4,8 +4,14 @@ import MapView, { Callout, Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import { Feather } from "@expo/vector-icons";
 
 import mapMarker from '../images/map-marker.png';
+import { useNavigation } from "@react-navigation/native";
 
 export default function OrphanagesMap() {
+    const navigation = useNavigation();
+    const handleNavigateToOrpanageDetails = () => {
+      navigation.navigate('OrphanageDetails')
+    };
+
     return (
         <View style={styles.container}>
             <MapView 
@@ -28,7 +34,7 @@ export default function OrphanagesMap() {
                             y: 0.8
                         }}            
                     >
-                    <Callout tooltip onPress={()=>alert('opa')}>
+                    <Callout tooltip onPress={handleNavigateToOrpanageDetails}>
                         <View style={styles.calloutContainer}>
                             <Text style={styles.calloutText}>Lar das Meninas</Text>
                         </View>
